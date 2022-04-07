@@ -1,0 +1,48 @@
+# -> Pas d'imports pour ce fichier là.
+
+# -> DOCUMENTATION DU PROGRAMME DE GENERATION AUTOMATIQUE DE CSV A PARTIR DES MAILS.
+# -> FAIT PAR ***** *****, DU 01/04/21 AU 13/08/21 PENDANT LE STAGE CHEZ *****.
+
+
+# -> ERREURS POSSIBLES:
+# -> La mise en page des emails peut changer, des emails contenant du gazons peuvent interferer avec le programme.
+# -> Les lignes avec des ! autour signalent qu'une erreur est survenue. Les raisons se trouvent dans le fichier de log.
+# -> Si une erreur survient durant le programme, il continuera quand même de fonctionner jusqu'au dernier mail.
+# -> Les lignes avec des # autour signalent le début et la fin de l'éxécution du programme. Pas de soucis.
+# -> Les lignes avec des = autour signalent qu'une commande à été traitée. Pas de soucis.
+
+# -> bref résumé du programme.
+
+
+# -> DÉROULEMENT DU PROGRAMME (COURT)
+# -> main.py -> read_emails.py -> pdf_extractor.py -> split_and_parse.py -> string_to_csv.py -> csv_to_ftp.py -> fin
+
+
+# -> MAJ 05/04/***** Début de la création du programme.
+# -> MAJ 07/04/***** On accède aux emails correctement, quelques bugs à signaler sur certains mails.
+# -> MAJ 09/04/***** On vérifie si la commande est un doublon grace à son nom.
+# -> MAJ 11/04/***** On lis la commande grâce à son fichier PDF.
+# -> MAJ 15/04/***** Création des fonctions de parsing pour faire le tri du contenu du PDF.
+# -> MAJ 19/04/***** Parsing OK, on supprime tout le contenu useless autour des infos utiles.
+# -> MAJ 25/04/***** Positionnement des infos dans un CSV en cours, dev d'un Algo en fonction du nombre de produits.
+# -> MAJ 01/05/***** Le CSV bug en fonction du nombre de produits, amélioration de l'algo.
+# -> MAJ 09/05/***** L'algo est OK, les articles apparaissent correctement mais bug quand le client est dans une ZAC.
+# -> MAJ 15/05/***** Parsing du fichier en fonction de si la client se trouve dans une ZA, Z, ZAC ou ZONE.
+# -> MAJ 16/05/***** Parsing des infos pour essayer de retrouver un numéro de téléphone et le mettre dans le CSV.
+# -> MAJ 18/05/***** Création des fonctions pour l'envoie des CSV vers le FTP.
+# -> MAJ 26/05/***** Envoi réussi vers le FTP.
+# -> MAJ 01/06/***** Optimisation du code pour accélerer le processsus.
+# -> MAJ 03/06/***** Création d'un système de LOG en cas d'erreurs.
+# -> MAJ 10/06/***** Le programme Print quand une commande est traité ou en cas de BUG.
+# -> MAJ 11/06/***** Premiers test non concluants pour la création d'un UI.
+# -> MAJ 12/06/***** Abandon de la création d'un UI pour le moment, Patch de bugs sur certaines commandes.
+# -> MAJ 15/06/***** Adaptation du programme de LINUX vers WINDOWS car les PATHS fonctionnent bizarrement.
+# -> MAJ 16/06/***** Changement des identifiants d'accès vers *****.*****2@gmail.com (Gaelle).
+# -> MAJ 17/06/***** Le programme fonctionne correctement, besoin de gestion d'erreur.
+# -> MAJ 28/06/***** La gestion d'erreur est faite, le programme ne plante plus.
+# -> MAJ 12/07/***** Optimisation du code, plus vite et moins moche.
+# -> MAJ 18/07/***** Début de la création de l'UI.
+# -> MAJ 19/07/***** Flemme de l'UI, il faut threader le code entre l'UI et le reste, bof à faire.
+# -> MAJ 20/07/***** Le programme est compilé en .EXE pour mise en place en CRON.
+# -> MAJ 21/07/***** Début des tests automatisés depuis le serveur d'*****.
+# -> MAJ 26/07/***** Ajout d'un parsing en cas d'accents dans la commande. Del des accents.

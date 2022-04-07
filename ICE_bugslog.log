@@ -1,0 +1,22 @@
+*****-10-29 15:55:59: Exception occurred:
+Traceback (most recent call last):
+  File "C:\Users\*****\*****\REPOS\*****\quickstart\read_emails.py", line 60, in subject_is_an_order
+    pdf_extractor.extract_pdf_infos(filepath, filename)
+  File "C:\Users\*****\*****\REPOS\*****\quickstart\pdf_extractor.py", line 20, in extract_pdf_infos
+    split_and_parse.class_all_infos(text, file_path, filename)
+  File "C:\Users\*****\*****\REPOS\*****\quickstart\split_and_parse.py", line 143, in class_all_infos
+    k = pick_quantity(k, product_nbr, 2)
+  File "C:\Users\*****\*****\REPOS\*****\quickstart\split_and_parse.py", line 38, in pick_quantity
+    size = len(quantity[0]) + 1
+IndexError: list index out of range
+*****-10-29 16:00:53: Exception occurred:
+Traceback (most recent call last):
+  File "C:\Users\*****\*****\REPOS\*****\quickstart\read_emails.py", line 60, in subject_is_an_order
+    pdf_extractor.extract_pdf_infos(filepath, filename)
+  File "C:\Users\*****\*****\REPOS\*****\quickstart\pdf_extractor.py", line 20, in extract_pdf_infos
+    split_and_parse.class_all_infos(text, file_path, filename)
+  File "C:\Users\*****\*****\REPOS\*****\quickstart\split_and_parse.py", line 143, in class_all_infos
+    k = pick_quantity(k, product_nbr, 2)
+  File "C:\Users\*****\*****\REPOS\*****\quickstart\split_and_parse.py", line 38, in pick_quantity
+    size = len(quantity[0]) + 1
+IndexError: list index out of range
